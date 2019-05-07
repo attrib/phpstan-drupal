@@ -34,5 +34,13 @@ class DeprecationRulesTest extends AnalyzerTestBase
                 'Class Drupal\Core\Entity\EntityManager implements deprecated interface Drupal\Core\Entity\EntityManagerInterface.'
             ]
         ];
+        yield [
+            __DIR__ . '/../fixtures/drupal/modules/phpstan_fixtures/src/DeprecatedGlobalConstants.php',
+            2,
+            [
+                'Call to deprecated constant DATETIME_STORAGE_TIMEZONE.',
+                'Call to deprecated constant DATETIME_DATE_STORAGE_FORMAT.',
+            ]
+        ];
     }
 }
